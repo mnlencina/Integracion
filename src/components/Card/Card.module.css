@@ -1,0 +1,117 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+  body {
+    background-image: url(https://c.wallhere.com/photos/92/98/space_3D_Funerium_galaxy_stars_colorful-1146361.jpg!d);
+  }
+
+  img{
+    top: 5px;
+    width: 90%;
+    border-radius: 5px ;
+  }
+  
+  
+  .card {
+    background: #191c296e;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 12px;
+    color: rgba(243, 248, 248, 0.92);
+    margin: 20px;
+  }
+  
+  .card:hover {
+    color: rgb(88, 199, 250);
+    transition: color 1s;
+  }
+  .card:hover:before, .card:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+  
+  
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcffa3, #3c66e3ab 43%, #4e00c28a);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+
+.btn{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #00035e;
+  border-radius: 10px;
+  border-width: 3px;
+  box-shadow: rgba(255, 255, 255, 0.262) 0 0 1px 0, rgba(244, 244, 245, 0.492) 0 3px 4px 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: cursive;
+  font-size: 15px;
+  padding: 0 5px;
+  transition: all 200ms;
+}
+  
+ .btn:hover{
+  color: #06ffe6;
+  background-color: #ffffff;
+  transform: scale(1.05);
+ }
+    
+
