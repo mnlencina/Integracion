@@ -5,20 +5,10 @@
   }
   
   :root {
-    --card-height: 65vh;
-    --card-width: calc(var(--card-height) / 1.5);
+    --card-height: 260px;
+    --card-width: calc(var(--card-height) / 1.27);
   }
   
-  
-  body {
-    background-image: url(https://c.wallhere.com/photos/92/98/space_3D_Funerium_galaxy_stars_colorful-1146361.jpg!d);
-  }
-
-  img{
-    top: 5px;
-    width: 90%;
-    border-radius: 5px ;
-  }
   
   
   .card {
@@ -31,7 +21,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     font-size: 12px;
     color: rgba(243, 248, 248, 0.92);
     margin: 20px;
@@ -40,10 +30,13 @@
   .card:hover {
     color: rgb(88, 199, 250);
     transition: color 1s;
+    transform: scale(1.1);
   }
+  
   .card:hover:before, .card:hover:after {
     animation: none;
     opacity: 0;
+    
   }
   
   
@@ -95,10 +88,10 @@
 .btn{
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 7px;
   background-color: #00035e;
-  border-radius: 10px;
-  border-width: 3px;
+  border-radius: 5px;
+  border-width: 0;
   box-shadow: rgba(255, 255, 255, 0.262) 0 0 1px 0, rgba(244, 244, 245, 0.492) 0 3px 4px 0;
   color: #ffffff;
   cursor: pointer;
@@ -110,8 +103,32 @@
   
  .btn:hover{
   color: #06ffe6;
-  background-color: #ffffff;
+  background-color: #010101;
   transform: scale(1.05);
  }
     
+ .imgContainer{
+    display: flex;
+    flex-direction: column-reverse;
+     width: 200px;
+     border-radius: 5px 5px 0 0 ;
+   }
+   .textNombre{     
+    margin-top: 1px;
+   
+    margin-bottom: 0px;
+     background-color: rgba(240, 248, 255, 0.78);
+     color: #00035e;
+   }
 
+   .genreSpecies{
+     display: flex;
+     justify-content: space-evenly;
+     background-color: #11049eb3;
+     border-radius: 0 0 5px 5px;
+     margin-top: 1px;
+     width: 200px;
+   }
+   .genreSpecies h2{
+     margin: 2px;
+   }

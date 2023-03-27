@@ -6,6 +6,11 @@ import characters from './data.js'
 function App () {
   return (
     <div className='App' style={{ padding: '25px' }}>
+      <div>
+        <SearchBar
+          onSearch={(characterID) => window.alert(characterID)}
+        />
+      </div>
       <hr />
       <div>
         <Cards
@@ -13,11 +18,6 @@ function App () {
         />
       </div>
       <hr />
-      <div>
-        <SearchBar
-          onSearch={(characterID) => window.alert(characterID)}
-        />
-      </div>
     </div>
   )
 }
