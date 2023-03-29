@@ -1,13 +1,28 @@
-import React from "react";
+import {useState} from "react";
 import styles from './SearchBar.module.css'
 
-let {searchform} = styles;
+let {searchform, imgSearch} = styles;
 
 export default function SearchBar(props) {
+   const [character, setCharacter] = useState('')
+   
+   const handleChange = (e) => {
+      setCharacter(e.target.value);
+   }
+
    return (
       <div className={searchform}>
-         <input type='search' />
-      <button onClick={()=> props.onSearch("ID?")}>Agregar</button>
+         <img className={imgSearch} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/2560px-Rick_and_Morty.svg.png" alt="" />
+            
+            <div>
+               <button onClick={()=> props.onSearch(Math.floor(Math.random() * 826))}>Ramdom</button>
+               <button onClick={()=> props.onSearch(character)}>Agregar</button>
+               <input type='search' onChange={handleChange}/>
+
+            </div>
+         
+
+         
       </div>
    );
 }

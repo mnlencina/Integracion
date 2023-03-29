@@ -1,9 +1,12 @@
 .searchform {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background:#f4f4f4;
     background:rgba(244,244,244,.79);
     border: 1px solid #d3d3d3;
     padding: 10px;
-    height: 34px;
+    height: 90px;
     margin: 1px;
         box-shadow:0 4px 9px rgba(0,0,0,.37);
     -moz-box-shadow:0 4px 9px rgba(0,0,0,.37);
@@ -14,7 +17,8 @@
   }
   
   .searchform input, .searchform button {
-    float: right
+    float: right;
+    
   }
   .searchform input {
     background:#fefefe;
@@ -71,4 +75,8 @@
   }
     .searchform button:hover {
       transform: scale(1.1);
+    }
+    .imgSearch{
+      justify-content: center;
+      width:300px;
     }
