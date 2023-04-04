@@ -1,8 +1,14 @@
+.link{
+ text-decoration: none;
+ color: inherit;
+}
+
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
     inherits: false;
   }
+
   
   :root {
     --card-height: 260px;
@@ -22,13 +28,13 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 12px;
-    color: rgba(243, 248, 248, 0.92);
+    font-size: 50%;
+    color: rgba(66,180,202);
     margin: 20px;
   }
   
   .card:hover {
-    color: rgb(88, 199, 250);
+    color: rgb(88, 250, 88);
     transition: color 1s;
     transform: scale(0.95);
   }
@@ -47,7 +53,7 @@
     border-radius: 8px;
     background-image: linear-gradient(
       var(--rotate)
-      , #5ddcffa3, #3c66e3ab 43%, #4e00c28a);
+      , #04ff19a3, rgb(191, 222, 66) 43%, rgb(25, 56, 64));
       position: absolute;
       z-index: -1;
       top: -1%;
@@ -69,7 +75,7 @@
     filter: blur(calc(var(--card-height) / 6));
     background-image: linear-gradient(
       var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
+      , #fffa5d, #4ae33c 43%, rgb(25, 56, 64));
       opacity: 1;
     transition: opacity .5s;
     animation: spin 2.5s linear infinite;
@@ -84,12 +90,12 @@
     }
   }
 
-
-.btn{
+  
+  .btn{
   position: absolute;
   top: 5px;
   right: 5.5px;
-  background-color: #00035e;
+  background-color: rgb(25, 56, 64);
   border-radius: 5px;
   border-width: 0;
   box-shadow: rgba(255, 255, 255, 0.262) 0 0 1px 0, rgba(244, 244, 245, 0.492) 0 3px 4px 0;
@@ -101,34 +107,33 @@
   transition: all 200ms;
 }
   
- .btn:hover{
+.btn:hover{
   color: #06ffe6;
   background-color: #010101;
   transform: scale(1.05);
  }
-    
+ 
  .imgContainer{
-    display: flex;
-    flex-direction: column-reverse;
+   display: flex;
+   flex-direction: column-reverse;
      width: 200px;
      border-radius: 5px 5px 0 0 ;
-   }
-   .textNombre{     
-    margin-top: 1px;
-   
-    margin-bottom: 0px;
-     background-color: rgba(240, 248, 255, 0.78);
-     color: #00035e;
+    }
+    .textNombre{     
+      margin-top: 5px;             
+      margin-bottom: 0px;
+      background-color: rgba(240, 248, 255, 0.78);
+      color: rgb(25, 56, 64);
    }
 
    .genreSpecies{
      display: flex;
      justify-content: space-evenly;
-     background-color: #11049eb3;
+     background-color: rgb(25, 56, 64);
      border-radius: 0 0 5px 5px;
-     margin-top: 1px;
+     margin-top: 5px;
      width: 200px;
    }
    .genreSpecies h2{
-     margin: 2px;
+     margin: 5px;
    }

@@ -1,0 +1,9 @@
+.active {
+    color: rgb(21, 250, 0);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .disable {
+    color: #f6f4e6;
+    text-decoration: none;
+  }
