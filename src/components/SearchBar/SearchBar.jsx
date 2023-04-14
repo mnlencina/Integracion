@@ -1,7 +1,7 @@
 import {useState} from "react";
 import styles from './SearchBar.module.css'
 
-let {searchform, imgSearch} = styles;
+let {searchform, imgSearch, btnSearch} = styles;
 
 export default function SearchBar(props) {
    const [character, setCharacter] = useState('')
@@ -20,9 +20,9 @@ export default function SearchBar(props) {
                <input type='search' onChange={handleChange}/>
 
             </div>
-         
-
-         
+         <div className={btnSearch}>
+            <button onClick={props.logOut}>LogOut</button>
+         </div>
       </div>
    );
 }

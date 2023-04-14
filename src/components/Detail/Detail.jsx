@@ -12,8 +12,9 @@ export default function Detail(props){
         .then((res)=> res.json())
         .then((data)=> setCharacter(data))
         .catch((error)=> alert('algo salio mal'))
-    },[])
-console.log(character)
+    },[character])
+    
+
     return(
         <div className={styles.container}>
         <button className={styles.detailBtn} onClick={()=> navigate(-1)}>Atras</button>

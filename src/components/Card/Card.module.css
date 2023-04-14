@@ -108,7 +108,7 @@
 }
   
 .btn:hover{
-  color: #06ffe6;
+  color: #2bff06;
   background-color: #010101;
   transform: scale(1.05);
  }
@@ -136,4 +136,22 @@
    }
    .genreSpecies h2{
      margin: 5px;
+   }
+   
+   .btn2{
+    position: absolute;
+    top: 5px;
+    left: 5.5px;
+    background-color: rgba(25, 56, 64, 0);
+    border-radius: 5px;
+    border-width: 0;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0 5px;
+    transition: all 200ms;
+  }
+    
+  .btn2:hover{
+    background-color: #01010100;
+    transform: scale(1.7);
    }
