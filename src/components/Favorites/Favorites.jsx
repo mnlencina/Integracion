@@ -20,6 +20,7 @@ const Favorites = ({myFavorites}) => {
             <option value="Descendente">Descendente</option>
         </select>
         <select onChange={handleChange} name="filtro">
+            <option value="All">All</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Genderless">Genderless</option>

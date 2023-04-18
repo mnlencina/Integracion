@@ -24,12 +24,14 @@ const reducer = (state = initialState, {type, payload}) =>{
             return {...state, myFavorites: Del, allCharacters: Del2}
             
         case FILTER:
+            if(payload === 'All') return {...state, myFavorites: state.allCharacters}
             let filtered = allCharacters.filter((chard)=> chard.gender === payload)
             return {...state, myFavorites: filtered}
             
         case ORDER:
-            const ordernado = [...state.allCharacters].sort((a,b)=> payload === 'Ascendente' ? a.id-b.id : b.id-a.id);
-            return {...state, myFavorites: ordernado}
+            const ordernado1 = [...state.allCharacters].sort((a,b)=> payload === 'Ascendente' ? a.id-b.id : b.id-a.id);
+            const ordernado2 = [...state.myFavorites].sort((a,b)=> payload === 'Ascendente' ? a.id-b.id : b.id-a.id);
+            return {...state, myFavorites: ordernado2, allCharacters: ordernado1}
     
         default:
             return {...state}
