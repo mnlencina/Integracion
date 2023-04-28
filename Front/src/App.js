@@ -23,7 +23,7 @@ function App () {
     fetch(`http://localhost:3001/rickandmorty/character/${id}`)
     .then(response => response.json())
     .then(data => data.name ? setCharacters((oldChars)=> [...oldChars, data]): alert('NO EXISTE!!'))
-    .catch((error)=> console.log(error))
+    .catch((error)=> console.log('ERROR EN APP',error))
   }
 
   const onClose = (id)=> {

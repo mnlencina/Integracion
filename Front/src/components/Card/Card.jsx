@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 
 let {link, card, btn, btn2, imgContainer, textNombre, genreSpecies} = styles;
 
-function Card({id, name, species, gender, image, onClose, myFavorites, deleteFavorite, addFavorite}) {
+function Card({id, name, species, gender, image, onClose, deleteFavorite, addFavorite, allCharacters}) {
    
    const [isFav, setIsFav] = useState(false)
    
@@ -22,13 +22,15 @@ function Card({id, name, species, gender, image, onClose, myFavorites, deleteFav
       }
    }
    
+   
+   
    useEffect(() => {
-      myFavorites.forEach((fav) => {
+      allCharacters.forEach((fav) => {
          if (fav.id === id) {
             setIsFav(true);
          }
       });
-   }, [myFavorites]);
+   }, [allCharacters]);
 
    return (
       <div className={card}>
@@ -57,7 +59,7 @@ function Card({id, name, species, gender, image, onClose, myFavorites, deleteFav
 
 const mapStateToProps = (state)=>{
    return{
-   myFavorites: state.myFavorites
+      allCharacters: state.allCharacters
 }
 }
 
