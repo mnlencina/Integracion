@@ -7,6 +7,7 @@ import About from './components/About/About'
 import Detail from './components/Detail/Detail'
 import Form from './components/Form/Form'
 import Favorites from './components/Favorites/Favorites'
+import axios from 'axios'
 
 
 function App () {
@@ -15,15 +16,14 @@ function App () {
   const [characters, setCharacters] = useState([])
   const [access, setAccess] = useState(false);
   
-  const userName = 'mnlencina@gmail.com';
-  const password = 'Mnlencina1';
-
-  const onSearch = (id)=> {
-    characters.filter(obj=> obj.id == id).length > 0 ? alert ('ESTA CARD YA EXISTE'):
-    fetch(`http://localhost:3001/rickandmorty/character/${id}`)
-    .then(response => response.json())
-    .then(data => data.name ? setCharacters((oldChars)=> [...oldChars, data]): alert('NO EXISTE!!'))
-    .catch((error)=> console.log('ERROR EN APP',error))
+  const onSearch = async(id)=> {
+    if (characters.filter(obj=> obj.id === +id).length > 0 ) throw alert ('ESTA CARD YA EXISTE')
+    let {data} = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+    try {
+      data.name ? setCharacters((oldChars)=> [...oldChars, data]): alert('NO EXISTE!!')      
+    } catch (error) {
+      console.log('ERROR EN APP',error)      
+    }
   }
 
   const onClose = (id)=> {
@@ -31,12 +31,21 @@ function App () {
   }
 
 
-const login = (userData)=> {
+/* const login = (userData)=> {
    if (userData.userName === userName && userData.password === password){
       
       setAccess(true);
       navigate('/home');
    }
+} */
+function login(userData) {
+  const { userName:email, password } = userData;
+  const URL = 'http://localhost:3001/rickandmorty/login/';
+  axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+     const { access } = data;
+     setAccess(data);
+     access && navigate('/home');
+  });
 }
 
 const logOut = ()=>{
