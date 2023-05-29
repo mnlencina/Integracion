@@ -8,8 +8,8 @@ import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } from "./actionsTypes"
 export const addFavorite = (char) => {
     const endpoint = 'http://localhost:3001/rickandmorty/fav';
     return async (dispatch) => {
-       let {data} = await axios.post(endpoint, char);
-          return dispatch({
+        let {data} = await axios.post(endpoint, char);
+            return dispatch({
              type: ADD_FAVORITE,
              payload: data,
           });       

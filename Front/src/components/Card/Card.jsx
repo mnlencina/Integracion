@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 
 let {link, card, btn, btn2, imgContainer, textNombre, genreSpecies} = styles;
 
-function Card({id, name, species, gender, image, onClose, deleteFavorite, addFavorite, allCharacters}) {
+function Card({id, name, species, gender, image, onClose, origin, status, deleteFavorite, addFavorite, allCharacters}) {
    
    const [isFav, setIsFav] = useState(false)
    
@@ -18,7 +18,7 @@ function Card({id, name, species, gender, image, onClose, deleteFavorite, addFav
          deleteFavorite(id)
       } else {
          setIsFav(true)
-         addFavorite({id, name, species, gender, image, onClose})
+         addFavorite({id, name, species, gender, image, onClose, origin, status})
       }
    }
    

@@ -28,7 +28,7 @@ const Favorites = ({myFavorites}) => {
         </select>
         
         <div className={styles.div}>
-            {myFavorites?.map(({id, name, species, gender, image})=>(
+            {myFavorites?.map(({id, name, species, gender, image, origin, status})=>(
                 <Card
                 id={id}
                 key={id}        
@@ -36,6 +36,8 @@ const Favorites = ({myFavorites}) => {
                 species={species}
                 gender={gender}
                 image={image}
+                origin={origin}
+                status={status}
                 />
             ))}
         </div>
