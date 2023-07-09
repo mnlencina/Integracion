@@ -1,9 +1,7 @@
 const { Favorite } = require('../DB_connection');
 
 const postFav = async (req, res) =>{
-
     let { id, name, origin, status, image, species, gender } = req.body;
-
     try {
         if (name !== undefined && origin !== undefined && status !== undefined && species !== undefined && gender !== undefined ) {
             await Favorite.findOrCreate({

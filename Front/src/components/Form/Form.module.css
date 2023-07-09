@@ -90,3 +90,56 @@ width: 400px;
           font-style: italic;
           line-height: 15px;
         }
+        
+        .disable {
+          color: #0900879c;
+          text-decoration: none;
+        }
+        .btnReg button{
+          background: rgba(191, 222, 66, 0.338);
+        background: -moz-linear-gradient(top, rgba(52, 236, 70, 0.462) 0%, rgba(64, 25, 25, 0.468) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(52, 236, 76, 0.513)), color-stop(100%,rgb(217, 220, 38)));
+        background: -webkit-linear-gradient(top, rgba(236, 52, 52, 0.512) 0%,rgba(84, 220, 38, 0.406) 100%);
+        background: -o-linear-gradient(top, rgba(187, 236, 52, 0.418) 0%,rgba(190, 220, 38, 0.477) 100%);
+        background: -ms-linear-gradient(top, rgba(52, 236, 107, 0.435) 0%,rgba(64, 34, 25, 0.323) 100%);
+        background: linear-gradient(to bottom, rgba(191, 222, 66, 0.413) 0%,rgba(25, 56, 64, 0.453) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34adec', endColorstr='#2691dc',GradientType=0 );
+        border: none;
+        color:#d5ff02;
+        cursor: pointer;
+        font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        padding: 10px;
+        margin-right: 7px;        
+        width:106px;
+        box-shadow: 0 0 2px #dd2626 inset;
+        -moz-box-shadow: 0 0 2px #dd2626 inset;
+        -webkit-box-shadow: 0 0 2px #dadd26 inset;
+        border-radius: 9px;
+        -moz-border-radius: 9px;
+        -webkit-border-radius: 9px;
+        
+      }
+        .btnReg button:hover {
+          transform: scale(1.1);
+        }
+        .btn2 button{
+          position: relative;
+          background: none;
+          color: rgba(0, 0, 0, 0.395);
+          box-shadow: none;
+          top: -43px;
+          left:73px;
+          background-color: none;
+          border: none;
+          border-radius: 0;
+          border-width: 0;
+          cursor: pointer;
+          font-size: 15px;
+          padding:0;
+          transition: all 200ms;
+        }
+          
+        .btn2 button:hover{
+          background-color: none;
+          transform: scale(1.7);
+         }

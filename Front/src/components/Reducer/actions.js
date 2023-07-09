@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } from "./actionsTypes"
+import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER, ADD_USER } from "./actionsTypes"
 
 /* export const addFavorite = (char)=>{
 
