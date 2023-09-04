@@ -124,11 +124,12 @@ width: 400px;
         }
         .btn2 button{
           position: relative;
+          width: 10px;
           background: none;
           color: rgba(0, 0, 0, 0.395);
           box-shadow: none;
           top: -43px;
-          left:73px;
+          right: -68px;
           background-color: none;
           border: none;
           border-radius: 0;
@@ -141,5 +142,9 @@ width: 400px;
           
         .btn2 button:hover{
           background-color: none;
-          transform: scale(1.7);
-         }
+          transform: scale(1.5);
+          -webkit-transform: scale(1.5);
+          -moz-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+          -o-transform: scale(1.5);
+}

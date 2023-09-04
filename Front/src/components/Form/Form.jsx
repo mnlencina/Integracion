@@ -7,7 +7,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function Form(props){
     const [logOn, setLogOn] = useState(false);
-    const [passView, setPassView] = useState(false);
+    const [passView, setPassView] = useState(true);
    
     const [userData, setUserData] = useState({
         userName:'',
