@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import styles from './Detail.module.css';
+//const URL_BACK = "http://localhost:3001/rickandmorty"
+const URL_BACK = "https://integracion-production.up.railway.app"
 
 export default function Detail(props){
     const {detailId} = useParams()
@@ -8,7 +10,7 @@ export default function Detail(props){
     const navigate = useNavigate()
 
     useEffect(()=>{
-        fetch(`http://localhost:3001/rickandmorty/character/${detailId}`)
+        fetch(`${URL_BACK}/rickandmorty/character/${detailId}`)
         .then((res)=> res.json())
         .then((data)=> setCharacter(data))
         .catch((error)=> alert('algo salio mal'))

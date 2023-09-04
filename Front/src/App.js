@@ -8,6 +8,8 @@ import Detail from './components/Detail/Detail'
 import Form from './components/Form/Form'
 import Favorites from './components/Favorites/Favorites'
 import axios from 'axios'
+//const URL_BACK = "http://localhost:3001/rickandmorty"
+const URL_BACK = "https://integracion-production.up.railway.app"
 
 
 
@@ -20,7 +22,7 @@ function App () {
   
   const onSearch = async(id)=> {
     if (characters.filter(obj=> obj.id === +id).length > 0 ) throw alert ('ESTA CARD YA EXISTE')
-    let {data} = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+    let {data} = await axios(`${URL_BACK}/rickandmorty/character/${id}`)
     try {
       data.name ? setCharacters((oldChars)=> [...oldChars, data]): alert('NO EXISTE!!')      
     } catch (error) {
@@ -42,7 +44,7 @@ function App () {
 } */
 function login(userData) {
   const { userName:email, password } = userData;
-  const URL = 'http://localhost:3001/rickandmorty/login/';
+  const URL = `${URL_BACK}/rickandmorty/login/`;
   axios(URL + `?email=${email}&password=${password}`)
   .then(({ data }) => {
      const { access } = data;
@@ -53,7 +55,7 @@ function login(userData) {
 }
 const addUser = async(userData) => {
   const { userName:email, password } = userData;
-  const endpoint = 'http://localhost:3001/rickandmorty/login';
+  const endpoint = `${URL_BACK}/rickandmorty/login`;
       await axios.post(endpoint,{email, password});
              
   };
