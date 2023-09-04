@@ -1,12 +1,15 @@
 import axios from "axios";
 import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER} from "./actionsTypes"
-const {URL_BACK} = process.env
+const URL_BACK = "http://localhost:3001/rickandmorty"
+//const URL_BACK = "http://localhost:3001/rickandmorty"
+
 /* export const addFavorite = (char)=>{
 
     return {type: ADD_FAVORITE, payload: char}
 } */
 export const addFavorite = (char) => {
     const endpoint = `${URL_BACK}/fav`;
+    console.log(endpoint)
     return async (dispatch) => {
         let {data} = await axios.post(endpoint, char);
             return dispatch({
