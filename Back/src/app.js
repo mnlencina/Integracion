@@ -5,13 +5,13 @@ const morgan = require("morgan");
 const server = express();
 const cors = require("cors");
 
+server.use(
+  cors()
+);
 
 server.use(express.json());
 server.use(morgan("dev"));
 
-server.use(
-  cors()
-);
 
 server.use((req, res, next)=>{
     res.header('Access-Control-Allow-Origin', '*');
