@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER} from "./actionsTypes"
-const URL_BACK = "http://localhost:3001/rickandmorty"
 //const URL_BACK = "http://localhost:3001/rickandmorty"
+const URL_BACK = "https://integracion-production.up.railway.app"
 
 /* export const addFavorite = (char)=>{
 
