@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about{
+    width: 80%;
+    background-color: #ffffffab;
+    margin-top: 20px;
+    border-radius: 10px;
+}

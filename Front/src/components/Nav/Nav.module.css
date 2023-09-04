@@ -7,7 +7,16 @@
     font-weight: bold;
     text-decoration: none;
   }
+.active:hover{
+ font-size: small;
+ color: rgba(5, 237, 117, 0.716);
+}
+  
   .disable {
     color: #f6f4e6;
-    text-decoration: none;
+    text-decoration: none; 
   }
+  .disable:hover{
+    font-size: small;
+    color: rgba(0, 255, 21, 0.716);
+   }

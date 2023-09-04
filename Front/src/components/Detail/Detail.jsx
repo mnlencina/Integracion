@@ -18,6 +18,7 @@ export default function Detail(props){
     return(
         <div className={styles.container}>
         <button className={styles.detailBtn} onClick={()=> navigate(-1)}>Atras</button>
+        <div className={styles.detail}>
             <div className={styles.textDiv}> 
                 <h1>NOMBRE: {character.name}</h1>
                 <h1>STATUS: {character.status}</h1>
@@ -27,6 +28,7 @@ export default function Detail(props){
             </div>
             <img className={styles.image} src={character.image} alt="" />        
             
+        </div>
         </div>
     )
 }

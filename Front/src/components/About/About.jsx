@@ -1,8 +1,10 @@
 import React from "react";
+import style from "./About.module.css"
 
 export default function About(props){
     return(
-        <div>
+        <div className={style.container}>
+            <div className={style.about}>
             <h1>Bienvenidos a mi primer Single Page Application</h1>
             <p>Estimado/a Usuario/a,
 
@@ -19,6 +21,7 @@ Gracias por su tiempo y consideración. Espero tener la oportunidad de mostrarle
 Atentamente,
 
 MATIAS NICOLAS LENCINA</p>
+            </div>
         </div>
     )
 }
