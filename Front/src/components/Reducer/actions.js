@@ -9,7 +9,7 @@ const URL_BACK = "https://integracion-production.up.railway.app"
 } */
 export const addFavorite = (char) => {
     const endpoint = `${URL_BACK}/fav`;
-    console.log(endpoint)
+    console.log(endpoint, char)
     return async (dispatch) => {
         let {data} = await axios.post(endpoint, char);
             return dispatch({
