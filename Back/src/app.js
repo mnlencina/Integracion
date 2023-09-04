@@ -7,7 +7,7 @@ const cors = require("cors");
 
 server.use(
   cors({
-    origin: "https://integracion-production.up.railway.app",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // Si es necesario, habilita el envío de cookies o credenciales
   })
